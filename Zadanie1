@@ -1,0 +1,55 @@
+------------------------------------------------------------------------------------------------------------------------
+                                         ODPOWIEDŹ NA PYTANIE PIERWSZE
+------------------------------------------------------------------------------------------------------------------------
+
+Klasy abstrakcyjne i interfejsy to rozwiązania mające na celu optymalizację struktury kodu i wzajemnych relacji między
+plikami.
+
+Jeżeli chcemy, aby klasa zawierała wskazane metody i zawrzemy je w interfejsie klasa ta nie będzie związana z
+implementowanym interfejsem hierarchią. Natomiast, gdy klasa rozszerza klasę abstrakcyjną, dziedzicząc tym samym
+wskazane metody, zostaje ona umiejscowiona w strukturze hierarchicznej.
+
+W interfejsie metody definiowane są domyślnie jako public abstract. W klasie abstrakcyjnej, aby metoda była metodą
+abstrakcyjną należy dodać słowo kluczowe abstract. Wynika z tego, że z klasy abstrakcyjnej możemy dziedziczyć metody nie
+tylko abstrakcyjne podczas, gdy implementacja interfejsu daje dostęp do metod domyślnie już abstrakcyjnych.
+
+Interfejs wymusi na klasie obecność zachowań co oznacza, że w klasie implementującej konieczne będzie zdefiniowanie
+wszystkich metod abstrakcyjnych ciałem (chyba, że interfejs zostanie zaimplementowany przez klasę abstrakcyjną, ale cały
+czas w domyśle chodzi o implementację interfejsu przez klasę konkretną). Istnieje przy tym dla interfejsu mechanizm
+default method, który pozwala w nim określić domyślne ciało metody.
+
+Klasę abstrakcyjną cechuje łatwiejsza rozbudowa. W strukturze klasy bazowej i klas pochodnych wystarczy dodać w klasie
+abstrakcyjnej jako superklasie kolejne metody, a każdy potomek od razu zyska dostępną funkcjonalność. Dodanie metody w
+interfejsie wiąże się z koniecznością wprowadzenia zmian w implementujących go klasach.
+
+Klasa może dziedziczyć z jednej klasy, ale może implementować wiele interfejsów. Dodatkowo interfejs może być
+rozszerzony interfejsem.
+
+Obie konstrukcje mogą zawierać pola. Pola interfejsu mają domyślne modyfikatory public static final, natomiast pola
+klasy abstrakcyjnej umożliwiają modyfikację miejsca w pamięci.
+
+Enum nie może rozszerzać klasy abstrakcyjnej, ale może implementować interfejs.
+
+------------------------------------------------------------------------------------------------------------------------
+                                         ODPOWIEDŹ NA PYTANIE DRUGIE
+------------------------------------------------------------------------------------------------------------------------
+
+Raz utworzona tablica nie może zmienić swojego rozmiaru.
+
+W liście zastosowany jest mechanizm wrapowania, przez co przetrzymuje ona w swej strukturze jedynie obiekty.
+
+Tablica może być strukturą wielowymiarową.
+
+Tablica przechowuje zawsze dane jednego typu, który zostaje określony w trakcie jej deklaracji.
+
+Deklaracja tablicy nie wymaga żadnego importu. Wszystko co jest do jej utworzenia potrzebne zaimportowane jest domyślnie.
+
+Tablica umożliwia wygodniejszy dostęp do danych po indexie.
+
+Z uwagi na powyższe zmiana wartości pod konkretnym indexem przebiega szybciej niż w przypadku listy, gdzie wartość jest
+szukana od początku struktury do miejsca docelowego przechodząc kolejno każdy element.
+
+Z kolei ciężej jest dodać w tablicy element pomiędzy dwoma już wprowadzonymi. W przypadku listy nastąpi zerwanie
+połączenia i utworzenie nowego do wprowadzonej wartości, natomiast tablica wymaga przesunięcia elementów po indexach.
+
+Dane w tablicy nie posiadają informacji o swoich sąsiadach.
